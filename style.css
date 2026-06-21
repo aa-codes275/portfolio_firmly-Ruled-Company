@@ -156,9 +156,8 @@ a{color:inherit;text-decoration:none;transition:.3s}
 .tsoc a:hover{background:var(--gold);color:var(--teal-2)}
 
 /* QR */
-/* تنسيق قسم الـ QR بالكامل */
 .qr-section {
-    background: linear-gradient(135deg, var(--teal-2), var(--teal));
+    background: var(--grad-teal);
     padding: 4rem 0;
 }
 
@@ -169,31 +168,29 @@ a{color:inherit;text-decoration:none;transition:.3s}
     align-items: center;
 }
 
-/* الكرت الذي يحتوي على الكيو آر */
 .qr-card {
-    background: rgba(255, 255, 255, 0.05); /* شفافية خفيفة ليتناسب مع الخلفية */
+    background: var(--teal-2); /* لون رصاصي/تركوازي غامق من ألوانك */
     padding: 2rem;
     border-radius: var(--radius);
     text-align: center;
     position: relative;
+    border: 1px solid var(--line);
     box-shadow: var(--shadow);
 }
 
-/* الإطار الذهبي الفخم للكرت */
 .qr-card::before {
     content: "";
     position: absolute;
     inset: -2px;
-    background: var(--grad-gold);
+    background: var(--grad-gold); /* الإطار الذهبي الفخم */
     border-radius: calc(var(--radius) + 2px);
     z-index: -1;
 }
 
-/* تنسيق حاوية الكيو آر لتكون واضحة وقابلة للمسح */
 #qrcode {
     display: grid;
     place-items: center;
-    background: #ffffff; /* خلفية بيضاء للـ QR ليتم مسحه بسهولة */
+    background: #ffffff; /* الخلفية البيضاء للـ QR لضمان عمل المسح */
     padding: 10px;
     border-radius: 8px;
     margin: 0 auto;
@@ -205,14 +202,20 @@ a{color:inherit;text-decoration:none;transition:.3s}
     display: block;
 }
 
-/* نص "شركة الحكم الراسخ" */
 .qr-card p {
-    color: var(--gold); /* جعلت اللون ذهبياً ليتماشى مع الهوية */
+    color: var(--gold-2); /* لون ذهبي فاتح للنص ليكون واضحاً */
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-family: 'Amiri', serif;
-    font-size: 1.2rem;
 }
+#qrcode-link {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#qrcode-link:hover {
+    transform: scale(1.05); /* حركة خفيفة عند الوقوف عليه */
+}
+
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem}
 .contact-info{background:linear-gradient(160deg,var(--teal),var(--teal-2));padding:2rem;border-radius:var(--radius);border:1px solid var(--line);display:flex;flex-direction:column;gap:1.2rem}
@@ -305,3 +308,4 @@ a{color:inherit;text-decoration:none;transition:.3s}
 @media (hover:none){
   .pcard:hover img,.pcard:hover video,.service-card:hover,.tcard:hover{transform:none}
 }
+
