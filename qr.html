@@ -47,11 +47,16 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
-  new QRCode(document.getElementById('qr'),{
-    text:(window.location.origin+window.location.pathname).replace(/qr\.html$/,'index.html'),
-    width:220,height:220,colorDark:'#1f3a3d',colorLight:'#ffffff',
-    correctLevel:QRCode.CorrectLevel.H
+  
+  new QRCode(document.getElementById('qr'), {
+    text: " https://aa-codes275.github.io/portfolio_firmly-Ruled-Company/", // رابط موقعك هنا
+    width: 220,
+    height: 220,
+    colorDark: '#000000', // لون الكود (أسود ليكون قابلاً للمسح)
+    colorLight: 'transparent', // شفاف لتبدو صورتك الذهبية تحته
+    correctLevel: QRCode.CorrectLevel.H
   });
+
 </script>
 </body>
 </html>
